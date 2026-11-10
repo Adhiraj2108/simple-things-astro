@@ -10,7 +10,11 @@
     "asset and anchor validation",
     "Cloudflare R2 hosting for all 25 assets",
     "public HTTPS checksum/CORS/cache verification",
-    "CDN URLs in production build"
+    "CDN URLs in production build",
+    "Cloudflare Worker deployment",
+    "root and www custom domains connected",
+    "live HTTPS homepage and stylesheet checksum verification",
+    "www and about redirects verified"
   ],
   "doing": null,
   "notDone": [

@@ -1,0 +1,49 @@
+[
+  {
+    "id": "04a0a6edfdbd07cf1cf4c1268a5cd928",
+    "name": "buysimplethings.org",
+    "type": "A",
+    "content": "31.43.161.6",
+    "proxiable": true,
+    "proxied": true,
+    "ttl": 1,
+    "settings": {},
+    "meta": {},
+    "comment": null,
+    "tags": [],
+    "created_on": "2026-11-10T13:05:24.929848Z",
+    "modified_on": "2026-11-10T13:05:24.929848Z"
+  },
+  {
+    "id": "4270b57ce5adb9c1d5b27a653b3c4b8b",
+    "name": "buysimplethings.org",
+    "type": "A",
+    "content": "31.43.160.6",
+    "proxiable": true,
+    "proxied": true,
+    "ttl": 1,
+    "settings": {},
+    "meta": {},
+    "comment": null,
+    "tags": [],
+    "created_on": "2026-11-10T13:05:24.915324Z",
+    "modified_on": "2026-11-10T13:05:24.915324Z"
+  },
+  {
+    "id": "ee7c49e79f4bedac03d4c3da644e8ef0",
+    "name": "www.buysimplethings.org",
+    "type": "CNAME",
+    "content": "sites.framer.app",
+    "proxiable": true,
+    "proxied": true,
+    "ttl": 1,
+    "settings": {
+      "flatten_cname": false
+    },
+    "meta": {},
+    "comment": null,
+    "tags": [],
+    "created_on": "2026-11-10T13:05:24.964886Z",
+    "modified_on": "2026-11-10T13:05:24.964886Z"
+  }
+]

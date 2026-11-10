@@ -42,3 +42,10 @@ Phone: below 810px; tablet: 810–1279px; desktop: 1280px and above. All three l
 - Downloaded every public asset and matched SHA-256 against local originals; verified CORS and cache headers.
 - Updated production HTML/CSS to use all 25 CDN URLs, and confirmed the production build passes.
 - Removed the temporary authenticated upload Worker after the transfer. No uploader remains deployed.
+
+## Domain connection
+- Built and deployed the site as Cloudflare Worker `simple-things` with native Workers Static Assets.
+- Connected root `buysimplethings.org` and `www.buysimplethings.org` as Worker custom domains. `www` redirects to the root over HTTPS.
+- Saved the prior Framer A/CNAME records in `cloudflare-dns-before.json`, then replaced only those website records.
+- Verified the root domain and Worker preview return the exact built homepage; verified the stylesheet checksum, www redirect, and /about redirect.
+- Deployment metadata and routing source are recorded under `cloudflare/`. Future source edits require a new deployment; no Git build pipeline is configured.

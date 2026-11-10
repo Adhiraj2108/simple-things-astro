@@ -1,0 +1,15 @@
+{
+  "accountId": "c59e71abfb131f5a984a17c911fcf794",
+  "zoneId": "902a126eeb6ab3a64bfc766ef043775a",
+  "workerName": "simple-things",
+  "compatibilityDate": "2026-11-10",
+  "entrypoint": "cloudflare/worker.js",
+  "assetsDirectory": "dist",
+  "excludedAssetDirectories": ["images", "fonts"],
+  "assetsBinding": "ASSETS",
+  "runWorkerFirst": true,
+  "domains": ["buysimplethings.org", "www.buysimplethings.org"],
+  "deploymentId": "8b61bd7090e84ed89a9d68d977bd1e8d",
+  "url": "https://buysimplethings.org",
+  "verificationUrl": "https://simple-things.rae-social-agency.workers.dev"
+}

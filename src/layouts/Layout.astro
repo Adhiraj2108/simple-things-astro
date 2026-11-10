@@ -24,6 +24,19 @@ const { title = 'Simple-Things | The Necessities For Everyday Simple Life', desc
     <main><slot /></main>
     <Footer />
     <script>
+      // Development-only geometry report for responsive comparison with Framer.
+      if (import.meta.env.DEV) {
+        const report = () => {
+          document.querySelectorAll('[data-layout-audit]').forEach(el => el.remove());
+          const out = document.createElement('output'); out.style.cssText = 'position:fixed;left:-10000px;top:0;width:100px'; out.dataset.layoutAudit = '';
+          for (const el of document.querySelectorAll('main > section, .site-footer, .hands-frame, .necklace-frame, .product-card, .product-image-wrapper, .tenet-copy')) {
+            const r = el.getBoundingClientRect(); const row = document.createElement('p');
+            row.dataset.geometry = JSON.stringify({name:el.className,x:Math.round(r.x),y:Math.round(r.y+scrollY),w:Math.round(r.width),h:Math.round(r.height)}); row.textContent = row.dataset.geometry; out.append(row);
+          }
+          document.body.append(out);
+        };
+        document.fonts.ready.then(report); window.addEventListener('resize', report);
+      }
       const menuButton = document.querySelector<HTMLButtonElement>('.menu-button');
       const menu = document.querySelector<HTMLElement>('.nav-links');
       function closeMenu() { menuButton?.setAttribute('aria-expanded', 'false'); document.body.classList.remove('menu-open'); }
