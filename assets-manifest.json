@@ -1,0 +1,132 @@
+{
+  "baseUrl": "https://assets.buysimplethings.org/v1",
+  "bucket": "simple-things-assets",
+  "accountId": "c59e71abfb131f5a984a17c911fcf794",
+  "assets": [
+    {
+      "key": "images/5vX74tcs2228yztMn1TMxvTKU5M.png",
+      "size": 2222804,
+      "sha256": "a0ba06b5ef345ea86b8052d7cb1da8b0f19421c26838c9d79f8b50f60d7cfd7c"
+    },
+    {
+      "key": "images/6kmb8PHLsuSNJGlDDSDrVCyrGg.webp",
+      "size": 77438,
+      "sha256": "6eaee74e1c13d17a9ac798015933822987b67fd536409a253bc386c75c0859cf"
+    },
+    {
+      "key": "images/8dSG1DdepPMilodp7zM1jmERqg.png",
+      "size": 1018286,
+      "sha256": "e41196c3c7fa25b1420fa7a407404c38b05a5c39cd1d2326eb8bb2839922ce18"
+    },
+    {
+      "key": "images/H2SlTba0yo2JG5NtYxq58Fy70.webp",
+      "size": 28756,
+      "sha256": "1e7f116b5f6a0f2d269b5c0725e560744cdf0a35c9452b19b9a71f60d84780fd"
+    },
+    {
+      "key": "images/HOsnSwEKyQMdolJY5h6Z4ppnQXw.webp",
+      "size": 108550,
+      "sha256": "665044717592edf833057cc766ab5e9fbfd246377263175656052aeb587a3ebc"
+    },
+    {
+      "key": "images/HiQ6xmtk7vlljoFUEsoZjytMmPY.png",
+      "size": 15169,
+      "sha256": "45b76591749e77f8d87cf7ff686e918745b380c51a6f2aaf7b17dab3d4e1cf9a"
+    },
+    {
+      "key": "images/IGDD6A3SanMnFhYkdLxNC2HvjcA.jpg",
+      "size": 1102849,
+      "sha256": "4affd4d3858a9e6680135ab1225dbbb4d0a623af1005917be41fadf3f32db9e8"
+    },
+    {
+      "key": "images/J8le3letiGCtf9BkCGIj5iwFo8.webp",
+      "size": 99412,
+      "sha256": "b80d41d6488b6b6178e557af559468d6d64c9015b1eb432bdf3d493939ec09e8"
+    },
+    {
+      "key": "images/cJGrzcPtxAC4uwhyOMsORllJw.webp",
+      "size": 24794,
+      "sha256": "e6837dcd72451dca83350831fd9617e0eef147c74d390b4f8c83aba9c325ff24"
+    },
+    {
+      "key": "images/favicon.png",
+      "size": 31124,
+      "sha256": "c9d36ba82c3c2caec112ccc0a974c2106af53dd2fb4fbfe0227ff5b452845a71"
+    },
+    {
+      "key": "images/kaF5mgFDHUAp2eka6aYWOTkAPTQ.png",
+      "size": 3436976,
+      "sha256": "1797f9eca80f2109e07c187234efcb0f1336c0770f5a6fd8edf4c8e5dd88298b"
+    },
+    {
+      "key": "images/o2AhZRDDM8ZwrhsAVEbJWqbO0.png",
+      "size": 2482903,
+      "sha256": "719e196e10b71a3efebbd71fc1ac339895e14f2e8217ef443ffdf0fa3bbb7300"
+    },
+    {
+      "key": "images/qfNrNAShjUXeCroTD7noPSoOrko.png",
+      "size": 14374,
+      "sha256": "531b50b80d28f26e6d7965535b7a92bbffacdfb2e56704f5bc265fbb2debb59c"
+    },
+    {
+      "key": "images/wordmark-0.svg",
+      "size": 7697,
+      "sha256": "1791dc63eec5ad522bb2c24f2633eb65275abde87aedf3205108276733a1375a"
+    },
+    {
+      "key": "images/wordmark-1.svg",
+      "size": 7697,
+      "sha256": "2875ee64ee92cbde6a1e825be3f8b083872d6906a31354e44a1bd8f09aaff274"
+    },
+    {
+      "key": "images/y3RwMAVGyyTu4eS7Qfq8hf4mUA.webp",
+      "size": 59618,
+      "sha256": "43147bee7a4befd5412ab2c2fb7407ec447189b868f0e928057fcbf00c4c855a"
+    },
+    {
+      "key": "images/yL7pHPGgK6B1R4OElhQMQ2lTGqs.webp",
+      "size": 72794,
+      "sha256": "465f38a7c2811ef23364a7d70a1c4155a8824c86a148b13f9514e0a9952ed7fa"
+    },
+    {
+      "key": "images/yUZyseGG11YrsYewOLYLcmSg72A.png",
+      "size": 4731553,
+      "sha256": "e349e123cbe379019b7e0939fe77152e5ca374a949c6494116d76a19885ad97a"
+    },
+    {
+      "key": "fonts/6IN5WOLRCYP4G4MOCOHOMXNON6Q7MDAR.woff2",
+      "size": 16728,
+      "sha256": "ddd9595560c35725e00d01667ce9bee519d245620e610844f0dd149df10b5d5f"
+    },
+    {
+      "key": "fonts/H5EOHLIZH5K7IZK6SGYJI75L4KV6FUO7.woff2",
+      "size": 17932,
+      "sha256": "c345686e277e61002fd90582285a80a03c9ed55237a0cad1a4d1a1aa37371fc0"
+    },
+    {
+      "key": "fonts/Mdzz5AlfCFmbhHZVk7F9Y0wAg.woff2",
+      "size": 19640,
+      "sha256": "d6497c264dbf70ae51add5103b6c7553dadff334b5853d09adf8c9f1c63ad36b"
+    },
+    {
+      "key": "fonts/O34WRFYO7JNWEBBA2LRV2XYRUSYXYDKH.woff2",
+      "size": 15192,
+      "sha256": "bd2269f50517a24d4e7e3611197054e7e3efbbcf71cd9b3c4d066e66aa4119c2"
+    },
+    {
+      "key": "fonts/TuYDSrjbj2rof4K6KRlXQAXckdI.woff2",
+      "size": 16728,
+      "sha256": "ddd9595560c35725e00d01667ce9bee519d245620e610844f0dd149df10b5d5f"
+    },
+    {
+      "key": "fonts/gkbFQWZc3qPvIqHy0esdNNJMc.woff2",
+      "size": 19564,
+      "sha256": "7393d1abac009ede0da9f95d6c83479a08d798e28d3509575e02fb1d2346866f"
+    },
+    {
+      "key": "fonts/vlcgXHhjPOw3oP9tEp2XLY0L7i0.woff2",
+      "size": 36808,
+      "sha256": "044799cad6002572a0d39fb58fa2a96a0db437c2e9447e311fa20b4e63a4cc2c"
+    }
+  ]
+}

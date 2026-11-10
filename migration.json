@@ -1,0 +1,28 @@
+{
+  "source": "https://buysimplethings.org/",
+  "stack": "Astro",
+  "phase": "verification",
+  "done": [
+    "survey",
+    "design-system",
+    "homepage implementation",
+    "production build",
+    "asset and anchor validation",
+    "Cloudflare R2 hosting for all 25 assets",
+    "public HTTPS checksum/CORS/cache verification",
+    "CDN URLs in production build"
+  ],
+  "doing": null,
+  "notDone": [
+    "desktop/tablet/phone screenshot comparisons",
+    "browser interaction verification",
+    "exact Framer motion parity"
+  ],
+  "needsYou": [
+    {
+      "action": "Focus simple-things in Ship Studio",
+      "recommendation": "Focus the project workspace to enable preview screenshots and final interaction checks."
+    }
+  ],
+  "scores": []
+}

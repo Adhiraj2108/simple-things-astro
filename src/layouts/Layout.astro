@@ -1,0 +1,53 @@
+---
+import { asset } from '../lib/assets';
+import '../styles/fonts.css';
+import '../styles/main.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const { title = 'Simple-Things | The Necessities For Everyday Simple Life', description = 'Buy contemporary, organic products designed to elevate the daily routine. Simple Things is a philosophy centered around enhancing the quality of everyday essentials.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://assets.buysimplethings.org" crossorigin />
+    <meta name="theme-color" content="#f6f2e5" />
+    <link rel="icon" href={asset("images/favicon.png")} type="image/png" />
+    <link rel="preload" href={asset("images/HOsnSwEKyQMdolJY5h6Z4ppnQXw.webp")} as="image" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#next">Skip to content</a>
+    <Header />
+    <main><slot /></main>
+    <Footer />
+    <script>
+      const menuButton = document.querySelector<HTMLButtonElement>('.menu-button');
+      const menu = document.querySelector<HTMLElement>('.nav-links');
+      function closeMenu() { menuButton?.setAttribute('aria-expanded', 'false'); document.body.classList.remove('menu-open'); }
+      menuButton?.addEventListener('click', () => {
+        const open = menuButton.getAttribute('aria-expanded') !== 'true';
+        menuButton.setAttribute('aria-expanded', String(open));
+        document.body.classList.toggle('menu-open', open);
+      });
+      menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+      const hero = document.querySelector('.hero');
+      const header = document.querySelector('.site-header');
+      if (hero) new IntersectionObserver(entries => {
+        header?.classList.toggle('is-past-hero', !entries[0].isIntersecting);
+      }).observe(hero);
+      else header?.classList.add('is-past-hero');
+      document.addEventListener('keydown', event => {
+        if (event.key !== 'Tab' || !document.body.classList.contains('menu-open')) return;
+        const links = menu?.querySelectorAll<HTMLAnchorElement>('a');
+        const last = links?.[links.length - 1];
+        if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); menuButton?.focus(); }
+        if (event.shiftKey && document.activeElement === menuButton) { event.preventDefault(); last?.focus(); }
+      });
+      window.matchMedia('(min-width: 810px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+    </script>
+  </body>
+</html>
