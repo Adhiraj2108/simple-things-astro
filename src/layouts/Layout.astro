@@ -39,13 +39,26 @@ const { title = 'Simple-Things | The Necessities For Everyday Simple Life', desc
       }
       const menuButton = document.querySelector<HTMLButtonElement>('.menu-button');
       const menu = document.querySelector<HTMLElement>('.nav-links');
-      function closeMenu() { menuButton?.setAttribute('aria-expanded', 'false'); document.body.classList.remove('menu-open'); }
+      const menuLabel = menuButton?.querySelector<HTMLElement>('.menu-label');
+      let menuTimer: ReturnType<typeof setTimeout> | undefined;
+      let requestedOpen = false;
+      function setMenu(open: boolean, delay = 0) {
+        clearTimeout(menuTimer);
+        requestedOpen = open;
+        menuTimer = setTimeout(() => {
+          menuButton?.setAttribute('aria-expanded', String(open));
+          if (menuLabel) menuLabel.textContent = open ? 'CLOSE' : 'MENU';
+          document.body.classList.toggle('menu-open', open);
+        }, delay);
+      }
+      function closeMenu() { setMenu(false); }
       menuButton?.addEventListener('click', () => {
-        const open = menuButton.getAttribute('aria-expanded') !== 'true';
-        menuButton.setAttribute('aria-expanded', String(open));
-        document.body.classList.toggle('menu-open', open);
+        setMenu(!requestedOpen, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 150);
       });
       menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      document.querySelector('.site-nav')?.addEventListener('click', event => {
+        if (event.target === event.currentTarget && document.body.classList.contains('menu-open')) closeMenu();
+      });
       document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
       const hero = document.querySelector('.hero');
       const header = document.querySelector('.site-header');
@@ -61,6 +74,37 @@ const { title = 'Simple-Things | The Necessities For Everyday Simple Life', desc
         if (event.shiftKey && document.activeElement === menuButton) { event.preventDefault(); last?.focus(); }
       });
       window.matchMedia('(min-width: 810px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+
+      // Mirror the source site's Framer cursor component on hover-capable pointers.
+      const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (finePointer.matches && !reducedMotion.matches) {
+        const cursor = document.createElement('div');
+        cursor.className = 'site-cursor';
+        cursor.setAttribute('aria-hidden', 'true');
+        const label = document.createElement('span');
+        label.textContent = 'Notify';
+        cursor.append(label);
+        document.body.append(cursor);
+        document.documentElement.classList.add('has-custom-cursor');
+
+        const updateCursor = (event: PointerEvent) => {
+          if (event.pointerType && event.pointerType !== 'mouse') return;
+          const target = event.target instanceof Element ? event.target : null;
+          cursor.style.left = `${event.clientX}px`;
+          cursor.style.top = `${event.clientY}px`;
+          cursor.classList.add('is-visible');
+          cursor.classList.toggle('is-light', !!target?.closest('.hero, .ceremony, .hands-frame, .necklace-frame'));
+          cursor.classList.toggle('is-link', !!target?.closest('a, button'));
+          cursor.classList.toggle('is-product', !!target?.closest('.product-card'));
+        };
+        document.addEventListener('pointermove', updateCursor, { passive: true });
+        document.addEventListener('pointerover', updateCursor, { passive: true });
+        document.addEventListener('pointerout', event => {
+          if (!event.relatedTarget) cursor.classList.remove('is-visible');
+        });
+        window.addEventListener('blur', () => cursor.classList.remove('is-visible'));
+      }
     </script>
   </body>
 </html>

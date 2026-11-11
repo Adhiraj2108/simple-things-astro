@@ -10,6 +10,10 @@ Reference: supplied Simple Things Framer project, inspected read-only.
 - Downloaded original photographs, both logo SVGs, favicon, and seven font files into public/.
 - Authored design tokens, responsive CSS, /style-guide and AGENTS.md visual language notes.
 - Implemented anchor navigation, mobile menu with keyboard handling, reduced-motion behavior, image hovers and hero entrance motion.
+- Matched the source cursor component: 15px pale/dark circles, a 64px translucent link hover with 8px background blur, and the 84×27px “Notify” product hover with the same blur. The native cursor remains for touch and reduced-motion users.
+- Matched the Framer phone menu variants: 59px closed header, centered 269px open panel, 14px Switzer Semibold label and links, 32px link spacing, dark 85% fill, 8px backdrop blur, and delayed opening of the links.
+- Matched the pre-footer contact section's poster construction: transparent source artwork over dark/light translucent panels with 12px backdrop blur, centered sizing across breakpoints, and italic editorial email links. The contact anchor now aligns the section beneath the fixed navigation as in Framer.
+- Matched the Framer hero entrance values across breakpoints: image 2× to 1× over 1.5s after 0.1s, wordmark 1.05× and transparent to normal over 1.75s after 0.5s, staggered tagline rise, and delayed scroll-link fade.
 - Verified production build with `npm run build`.
 - Validated all generated homepage asset paths and section anchors: no missing destinations.
 - Preview console had no errors when connected after the first build.
@@ -20,7 +24,7 @@ None. Implementation is available locally; screenshot verification is waiting fo
 ## Not done
 - Desktop/tablet/phone screenshot comparisons and runtime interaction verification.
 - Pixel-match score: not measured. The preview initially disconnected, briefly reconnected for a starter capture and console check, then reported multiple open projects with none focused. The computer-use browser host was unavailable. A Framer desktop reference screenshot was inspected, but no rendered rebuild screenshot could be obtained.
-- Exact Framer scroll/spring animation parity is not established. Hero entrance and hover states are approximated with native CSS. Story panels expose text on hover rather than duplicating Framer's scroll-driven opacity.
+- Exact Framer scroll/spring animation parity is not established. Story panels expose text on hover rather than duplicating Framer's scroll-driven opacity.
 
 ## Needs you
 Focus the simple-things workspace in Ship Studio to enable final screenshots and interaction checks. An asynchronous request has been sent.
